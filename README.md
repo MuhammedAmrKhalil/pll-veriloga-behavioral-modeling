@@ -1,4 +1,4 @@
-# PLL veriloga behavioral modeling
+
 # PLL Design and Verilog-A Behavioral Modeling
 
 ## Overview
