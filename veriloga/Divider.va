@@ -1,0 +1,42 @@
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module Divider(VIN, VOUT);
+
+input VIN;
+output VOUT;
+
+voltage VIN, VOUT;
+
+parameter real vh = 1.2;
+parameter real vl = 0;
+parameter real vth = 0.6;
+parameter integer ratio = 8 from [2:inf);
+
+parameter real tt = 10p from (0:inf);
+parameter real td = 0 from [0:inf);
+
+integer count = 0;
+real out_value = 0;
+
+analog begin
+
+@(cross(V(VIN) - vth, 1)) begin
+
+if (count < ratio/2)
+out_value = vl;
+else
+out_value = vh;
+
+if (count == ratio - 1)
+count = 0;
+else
+count = count + 1;
+
+end
+
+V(VOUT) <+ transition(out_value, td, tt);
+
+end
+endmodule

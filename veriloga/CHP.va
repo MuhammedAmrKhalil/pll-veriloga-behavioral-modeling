@@ -1,0 +1,33 @@
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module CHP(UP,DN,IOUT);
+
+input UP,DN;
+inout IOUT;
+
+electrical UP,DN,IOUT;
+
+parameter real ichp = 10u from [0:inf);
+parameter real thresh=0.6;
+parameter real trise=10p, tfall=10p, td=0;
+
+real IOUT_i = 0;
+
+analog begin
+
+@(cross(V(UP)-thresh,0));
+@(cross(V(DN)-thresh,0));
+
+if ((V(UP) > thresh) && (V(DN) < thresh))
+IOUT_i = -ichp;
+else if ((V(DN) > thresh) && (V(UP) < thresh))
+IOUT_i = ichp;
+else
+IOUT_i = 0;
+
+I(IOUT) <+ transition(IOUT_i,td,trise,tfall);
+
+end
+endmodule
