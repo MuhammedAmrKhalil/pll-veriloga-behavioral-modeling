@@ -22,7 +22,8 @@ The project includes:
 
 ## PLL Architecture
 
-<img width="641" height="377" alt="image" src="https://github.com/user-attachments/assets/d703f934-3d0e-4e8a-aff4-238dde1480ec" />
+<img width="1729" height="638" alt="PLL_B" src="https://github.com/user-attachments/assets/15476006-5c30-419e-9994-2f83cce74394" />
+
 
 
 ## PLL Specs
@@ -37,3 +38,4 @@ Project Specifications
 | Charge Pump Current | 10 µA |
 | Phase Margin | 70° |
 | Technology | Verilog-A Behavioral Modeling |
+
