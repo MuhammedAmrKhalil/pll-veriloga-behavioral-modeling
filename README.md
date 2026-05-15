@@ -1,7 +1,7 @@
 
 # PLL Design and Verilog-A Behavioral Modeling
 
-## Overviewww
+## Overview
 
 This project presents the design and simulation of a complete Phase-Locked Loop (PLL) using Verilog-A behavioral modeling.
 
