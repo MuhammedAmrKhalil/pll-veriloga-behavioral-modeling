@@ -13,9 +13,7 @@ The project includes:
 - Charge Pump (CHP)
 - Voltage Controlled Oscillator (VCO)
 - Behavioral Frequency Divider
-- Transistor-Level Divider
 - Complete PLL Integration
-- Analytical Calculations
 - MATLAB-Based Loop Filter Design
 
 ---
